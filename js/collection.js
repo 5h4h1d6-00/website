@@ -46,7 +46,7 @@ No Hadiths Found
 
 }
 
-hadiths.forEach(hadith=>{
+hadiths.forEach((hadith,index)=>{
 
 const card =
 document.createElement(
@@ -84,7 +84,46 @@ Book ${hadith.bookId}
 Hadith ${hadith.idInBook}
 
 </div>
+
+<button
+class="delete-hadith-btn">
+
+🗑 Remove
+
+</button>
 `;
+  const deleteBtn =
+card.querySelector(
+".delete-hadith-btn"
+);
+
+deleteBtn.onclick = ()=>{
+
+if(
+!confirm(
+"Remove this hadith from collection?"
+)
+){
+return;
+}
+
+collectionData[
+collectionName
+].splice(index,1);
+
+localStorage.setItem(
+
+"collectionData",
+
+JSON.stringify(
+collectionData
+)
+
+);
+
+location.reload();
+
+};
 
 container.appendChild(
 card
