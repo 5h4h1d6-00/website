@@ -123,7 +123,7 @@ localStorage.getItem(
 "collections"
 )
 ) || ["Default"];
-
+};
 const selected =
 prompt(
 
@@ -190,3 +190,13 @@ alert(
 "Hadith Saved To " +
 selected
 );
+
+
+
+
+
+
+
+
+
+  
