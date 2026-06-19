@@ -26,6 +26,12 @@ card.innerHTML = `
 <h3>${name}</h3>
 
 `;
+  card.onclick = ()=>{
+
+location.href =
+`collection.html?name=${encodeURIComponent(name)}`;
+
+};
 
 container.appendChild(card);
 
