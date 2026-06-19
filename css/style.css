@@ -536,3 +536,28 @@ font-size:15px;
     z-index:9999;
 
 }
+.collections-title{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+#collectionsContainer{
+
+    padding:20px;
+
+}
+
+.collection-card{
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+}
