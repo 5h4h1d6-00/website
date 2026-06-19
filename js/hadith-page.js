@@ -112,12 +112,12 @@ history.back();
 
 };
 
-const saveBtn =
+const bookmarkButton =
 document.getElementById(
 "saveCollectionBtn"
 );
 
-saveBtn.onclick = ()=>{
+bookmarkButton.onclick = ()=>{
 
 const collections =
 JSON.parse(
