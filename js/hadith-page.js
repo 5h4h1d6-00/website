@@ -12,7 +12,7 @@ const currentBook =
 booksData[bookId];
 
 const chapter =
-currentBook.chapters.find(
+currentBook.chapter.find(
 c => c.id === chapterId
 );
 
