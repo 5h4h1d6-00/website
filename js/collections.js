@@ -34,3 +34,26 @@ container.appendChild(card);
 }
 
 renderCollections();
+document
+.getElementById(
+"newCollectionBtn"
+)
+.onclick = ()=>{
+
+const name =
+prompt(
+"Collection Name"
+);
+
+if(!name) return;
+
+collections.push(name);
+
+localStorage.setItem(
+"collections",
+JSON.stringify(collections)
+);
+
+renderCollections();
+
+};
