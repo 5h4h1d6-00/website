@@ -60,7 +60,7 @@ reference.textContent =
 `Hadith ${h.idInBook}`;
 
 counter.textContent =
-`${currentIndex+1} / ${hadiths.length}`;
+`${currentIndex + 1} / ${hadiths.length}`;
 
 }
 
@@ -70,7 +70,7 @@ function nextHadith(){
 
 if(
 currentIndex <
-hadiths.length-1
+hadiths.length - 1
 ){
 
 currentIndex++;
@@ -103,6 +103,96 @@ document
 .getElementById("prevBtn")
 .onclick = prevHadith;
 
+document
+.getElementById("backBtn")
+.onclick = ()=>{
+
+history.back();
+
+};
+
+const saveBtn =
+document.getElementById(
+"saveCollectionBtn"
+);
+
+saveBtn.onclick = ()=>{
+
+const collections =
+JSON.parse(
+localStorage.getItem(
+"collections"
+)
+) || ["Default"];
+
+const selected =
+prompt(
+
+"Save To Collection:\n\n" +
+
+collections.join("\n")
+
+);
+
+if(!selected) return;
+
+const collectionData =
+JSON.parse(
+localStorage.getItem(
+"collectionData"
+)
+) || {};
+
+if(!collectionData[selected]){
+
+collectionData[selected] = [];
+
+}
+
+const currentHadith =
+hadiths[currentIndex];
+
+collectionData[selected].push({
+
+bookId:
+currentHadith.bookId,
+
+chapterId:
+currentHadith.chapterId,
+
+hadithId:
+currentHadith.id,
+
+idInBook:
+currentHadith.idInBook,
+
+arabic:
+currentHadith.arabic,
+
+narrator:
+currentHadith.english.narrator,
+
+english:
+currentHadith.english.text
+
+});
+
+localStorage.setItem(
+
+"collectionData",
+
+JSON.stringify(
+collectionData
+)
+
+);
+
+alert(
+"Hadith Saved To " +
+selected
+);
+
+};
 document
 .getElementById("backBtn")
 .onclick = ()=>{
