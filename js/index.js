@@ -53,6 +53,53 @@ id:9,
 english:"Darimi",
 arabic:"سنن الدارمي"
 }
+  {
+id:10,
+english:"Al-Adab Al-Mufrad",
+arabic:"الأدب المفرد"
+},
+
+{
+id:11,
+english:"Bulugh al-Maram",
+arabic:"بلوغ المرام"
+},
+
+{
+id:12,
+english:"Mishkat al-Masabih",
+arabic:"مشكاة المصابيح"
+},
+
+{
+id:13,
+english:"Riyad as-Salihin",
+arabic:"رياض الصالحين"
+},
+
+{
+id:14,
+english:"Shama'il Muhammadiyah",
+arabic:"الشمائل المحمدية"
+},
+
+{
+id:15,
+english:"40 Nawawi",
+arabic:"الأربعون النووية"
+},
+
+{
+id:16,
+english:"40 Hadith Qudsi",
+arabic:"الأحاديث القدسية الأربعون"
+},
+
+{
+id:17,
+english:"40 Hadith Shah Waliullah",
+arabic:"الأربعون للشاه ولي الله"
+}
 
 ];
 
